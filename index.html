@@ -2,481 +2,255 @@
 <html lang="ca">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Christian Rios — Tècnic en Sistemes Microinformàtics i Xarxes (SMX)</title>
-<meta name="description" content="Portfolio de Christian Rios, tècnic en SMX: reparació de maquinari, Linux/Windows Server, xarxes i còpies de seguretat. Disponible per a pràctiques FCT o Dual.">
-<meta name="author" content="Christian Rios Alvarin">
-<meta name="theme-color" content="#f4f7fb" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)">
-<meta property="og:type" content="profile">
-<meta property="og:title" content="Christian Rios — Tècnic en SMX">
-<meta property="og:description" content="Maquinari, Linux/Windows Server, xarxes i backups. Buscant pràctiques FCT o Dual.">
-<meta property="og:locale" content="ca_ES">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rostisseria Cal Rafa — Ripollet</title>
+<meta name="description" content="Rostisseria Cal Rafa a Ripollet: pollastres a l'ast i cuina casolana. Rambla de les Vinyes, 12.">
+<meta name="theme-color" content="#111111">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Christian Rios Alvarin",
-  "jobTitle": "Tècnic en Sistemes Microinformàtics i Xarxes",
-  "email": "mailto:christian2507092009@gmail.com",
-  "sameAs": ["https://github.com/nathansudo09"],
-  "knowsAbout": ["Linux", "Windows Server", "Active Directory", "Xarxes", "Còpies de seguretat"]
-}
-</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap">
 
 <style>
-/* ============ TOKENS ============ */
 :root{
-  --bg:#f4f7fb;
-  --surface:#ffffff;
-  --surface-2:#eef3fa;
-  --text:#475569;
-  --title:#0f172a;
-  --muted:#64748b;
-  --border:#dbe3ee;
-  --accent:#0284c7;
-  --accent-2:#7c3aed;
-  --ok-bg:#dcfce7;
-  --ok:#166534;
-  --chip-bg:#e0f2fe;
-  --glow:rgba(2,132,199,.18);
-  --radius:16px;
-  --shadow:0 1px 2px rgba(15,23,42,.04), 0 12px 32px rgba(15,23,42,.06);
-  --maxw:960px;
-  --ease:cubic-bezier(.22,.61,.36,1);
+  --bg:#0d0d0d;
+  --surface:#161616;
+  --surface-2:#1e1e1e;
+  --text:#d8d8d8;
+  --title:#ffffff;
+  --muted:#9a9a9a;
+  --border:#2a2a2a;
+  --red:#d81f26;
+  --red-dark:#a8161c;
+  --gold:#f0a500;
+  --radius:14px;
+  --maxw:1080px;
 }
-
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0b1120; --surface:#131c31; --surface-2:#18233c;
-    --text:#9aa8bf; --title:#f8fafc; --muted:#7d8ba3;
-    --border:#26324d; --accent:#38bdf8; --accent-2:#a78bfa;
-    --ok-bg:rgba(74,222,128,.14); --ok:#4ade80;
-    --chip-bg:rgba(56,189,248,.14); --glow:rgba(56,189,248,.22);
-    --shadow:0 1px 2px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.35);
-    color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0b1120; --surface:#131c31; --surface-2:#18233c;
-  --text:#9aa8bf; --title:#f8fafc; --muted:#7d8ba3;
-  --border:#26324d; --accent:#38bdf8; --accent-2:#a78bfa;
-  --ok-bg:rgba(74,222,128,.14); --ok:#4ade80;
-  --chip-bg:rgba(56,189,248,.14); --glow:rgba(56,189,248,.22);
-  --shadow:0 1px 2px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.35);
-  color-scheme:dark;
-}
-
-/* ============ RESET ============ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{
-  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   background:var(--bg);color:var(--text);line-height:1.7;
   font-size:clamp(15px,.4vw + 14px,17px);
-  min-height:100dvh;
-  padding-top:env(safe-area-inset-top,0);
-  padding-bottom:env(safe-area-inset-bottom,0);
-  background-image:
-    radial-gradient(60rem 30rem at 85% -10%,var(--glow),transparent 60%),
-    radial-gradient(40rem 25rem at -10% 20%,rgba(124,58,237,.10),transparent 60%);
-  background-repeat:no-repeat;background-attachment:fixed;
-  transition:background-color .3s var(--ease), color .3s var(--ease);
 }
 img{max-width:100%;display:block}
-a{color:inherit}
-ul,ol{list-style:none}
-h1,h2,h3{color:var(--title);line-height:1.2;letter-spacing:-.02em}
-code{
-  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
-  font-size:.9em;background:var(--surface-2);
-  padding:.15em .4em;border-radius:6px;color:var(--accent);
-}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+h1,h2,h3{color:var(--title);line-height:1.15;font-family:"Playfair Display",Georgia,serif}
 .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(16px,4vw,24px)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
 
-/* ============ FOCUS ============ */
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
-.skip{
-  position:absolute;left:-9999px;top:0;z-index:100;
-  background:var(--accent);color:#fff;padding:12px 20px;
-  border-radius:0 0 10px 0;font-weight:600;text-decoration:none;
-}
-.skip:focus{left:0}
-
-/* ============ NAV ============ */
+/* ---------- NAV ---------- */
 .nav{
-  position:sticky;top:0;z-index:50;
-  backdrop-filter:blur(14px) saturate(160%);
-  background:color-mix(in srgb,var(--bg) 80%,transparent);
-  border-bottom:1px solid transparent;
-  transition:border-color .3s var(--ease), box-shadow .3s var(--ease);
+  position:sticky;top:0;z-index:60;
+  background:rgba(13,13,13,.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
 }
-.nav.is-stuck{border-bottom-color:var(--border);box-shadow:0 4px 24px rgba(15,23,42,.06)}
-.nav__inner{display:flex;align-items:center;gap:16px;min-height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;color:var(--title);margin-right:auto}
-.brand__mark{
-  display:grid;place-items:center;width:34px;height:34px;border-radius:10px;
-  background:linear-gradient(135deg,var(--accent),var(--accent-2));
-  color:#fff;font-size:.8rem;font-weight:800;
-}
-.brand__text{font-size:.95rem}
-.nav__menu{display:flex;gap:4px}
-.nav__menu a{
-  text-decoration:none;font-size:.9rem;font-weight:500;
-  padding:8px 12px;border-radius:8px;color:var(--text);
-  transition:color .2s, background-color .2s;
-}
-.nav__menu a:hover{color:var(--accent);background:var(--surface-2)}
-.nav__menu a[aria-current="true"]{color:var(--accent);background:var(--chip-bg)}
-.nav__toggle{
-  display:none;width:42px;height:42px;border:1px solid var(--border);
-  background:var(--surface);border-radius:10px;cursor:pointer;
-  align-items:center;justify-content:center;
-}
-.nav__bars,.nav__bars::before,.nav__bars::after{
-  display:block;width:18px;height:2px;border-radius:2px;
-  background:var(--title);transition:transform .25s var(--ease), opacity .2s;
-}
-.nav__bars::before,.nav__bars::after{content:"";position:relative}
-.nav__bars::before{top:-6px}
-.nav__bars::after{top:4px}
-.nav__toggle[aria-expanded="true"] .nav__bars{background:transparent}
-.nav__toggle[aria-expanded="true"] .nav__bars::before{transform:translateY(6px) rotate(45deg)}
-.nav__toggle[aria-expanded="true"] .nav__bars::after{transform:translateY(-4px) rotate(-45deg)}
-.theme{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--surface);color:var(--title);
-  border:1px solid var(--border);border-radius:99px;
-  padding:8px 14px;font:inherit;font-size:.85rem;font-weight:500;
-  cursor:pointer;transition:border-color .2s, transform .2s;
-}
-.theme:hover{border-color:var(--accent);transform:translateY(-1px)}
+.nav__inner{display:flex;align-items:center;gap:14px;min-height:66px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto;font-weight:700;color:var(--title)}
+.brand__logo{height:44px;width:auto;border-radius:8px;background:#fff;padding:3px}
+.brand__name{font-family:"Playfair Display",serif;font-size:1.1rem}
+.nav__menu{display:flex;gap:2px}
+.nav__menu a{padding:9px 13px;border-radius:8px;font-size:.92rem;font-weight:500;transition:.2s}
+.nav__menu a:hover{color:var(--gold);background:var(--surface-2)}
+.nav__toggle{display:none;width:42px;height:42px;background:var(--surface);border:1px solid var(--border);border-radius:10px;cursor:pointer;color:var(--title);font-size:1.2rem}
 
-/* ============ HERO ============ */
-.hero{padding-block:clamp(40px,7vw,80px) clamp(24px,4vw,40px)}
-.hero__inner{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,48px);align-items:center}
-.hero__photo{
-  width:clamp(150px,22vw,220px);aspect-ratio:1;border-radius:50%;
-  padding:5px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
-  box-shadow:0 20px 60px var(--glow);
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;text-align:center;
+  padding-block:clamp(48px,9vw,96px);
+  background:
+    radial-gradient(50rem 24rem at 50% 0%,rgba(216,31,38,.22),transparent 65%),
+    linear-gradient(180deg,#1a0a0a 0%,var(--bg) 100%);
+  border-bottom:1px solid var(--border);
 }
-.hero__photo img{
-  width:100%;height:100%;border-radius:50%;object-fit:cover;
-  object-position:50% 40%;border:5px solid var(--bg);
+.hero__logo{width:min(560px,88vw);margin:0 auto 26px;border-radius:16px;background:#fff;padding:10px;box-shadow:0 24px 60px rgba(216,31,38,.28)}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:900;letter-spacing:-.02em}
+.hero__tag{
+  display:inline-block;margin-top:14px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;font-size:.82rem;color:var(--gold);
 }
-.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-h1{font-size:clamp(2.1rem,6vw,3.2rem);font-weight:800}
-.role{
-  font-weight:700;font-size:clamp(1rem,2.2vw,1.15rem);margin:8px 0 14px;
-  background:linear-gradient(90deg,var(--accent),var(--accent-2));
-  -webkit-background-clip:text;background-clip:text;color:transparent;width:fit-content;
-}
-.lead{max-width:56ch}
-.status{
-  display:inline-flex;align-items:center;gap:9px;
-  background:var(--ok-bg);color:var(--ok);
-  padding:6px 14px;border-radius:99px;
-  font-size:.85rem;font-weight:600;margin-top:18px;
-}
-.status__dot{width:8px;height:8px;border-radius:50%;background:currentColor;animation:pulse 2s infinite}
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 currentColor}
-  70%{box-shadow:0 0 0 8px transparent}
-  100%{box-shadow:0 0 0 0 transparent}
-}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.cta--center{justify-content:center}
+.hero p.lead{max-width:52ch;margin:18px auto 0;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
 .btn{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:12px 22px;border-radius:12px;
-  font-weight:600;font-size:.95rem;text-decoration:none;
-  transition:transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s;
+  display:inline-flex;align-items:center;gap:9px;padding:13px 24px;
+  border-radius:12px;font-weight:600;font-size:.95rem;cursor:pointer;
+  border:1px solid transparent;transition:transform .2s,box-shadow .2s,border-color .2s;
 }
-.btn--primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 10px 26px var(--glow)}
-.btn--ghost{background:var(--surface);border:1px solid var(--border);color:var(--title)}
 .btn:hover{transform:translateY(-2px)}
-.btn--primary:hover{box-shadow:0 16px 34px var(--glow)}
-.btn--ghost:hover{border-color:var(--accent)}
+.btn--primary{background:linear-gradient(135deg,var(--red),var(--red-dark));color:#fff;box-shadow:0 10px 28px rgba(216,31,38,.35)}
+.btn--ghost{background:transparent;border-color:var(--border);color:var(--title)}
+.btn--ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn--wa{background:#25d366;color:#052e16}
 
-/* ============ SECCIONS ============ */
-.section{padding-block:clamp(28px,5vw,48px)}
-h2{font-size:clamp(1.25rem,3vw,1.55rem);font-weight:700;display:flex;align-items:center;gap:16px;margin-bottom:22px}
-h2::after{content:"";flex:1;height:1px;background:var(--border)}
-.prose{max-width:70ch}
-.prose p + p{margin-top:14px}
+/* ---------- SECCIONS ---------- */
+.section{padding-block:clamp(36px,6vw,64px)}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:900;margin-bottom:8px}
+.section__sub{color:var(--muted);margin-bottom:28px;max-width:60ch}
 
-/* ============ STATS ============ */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;padding-block:clamp(16px,3vw,28px)}
-.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow)}
-.stat b{display:block;font-size:1.35rem;color:var(--accent);margin-bottom:4px}
-.stat span{font-size:.88rem;color:var(--muted)}
-
-/* ============ TIMELINE ============ */
-.timeline{position:relative;padding-left:28px}
-.timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:var(--border)}
-.timeline__item{position:relative;padding-bottom:26px}
-.timeline__item:last-child{padding-bottom:0}
-.timeline__dot{position:absolute;left:-28px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
-.timeline__body h3{font-size:1.05rem;margin-bottom:4px}
-.timeline__meta{font-size:.82rem;color:var(--accent);font-weight:600;margin-bottom:6px}
-
-/* ============ SKILLS ============ */
-.skills{display:flex;flex-wrap:wrap;gap:10px}
-.skill{
-  display:inline-flex;align-items:center;gap:9px;
-  background:var(--surface);border:1px solid var(--border);
-  color:var(--title);padding:9px 16px;border-radius:99px;
-  font-size:.9rem;font-weight:500;
-  transition:transform .2s var(--ease), border-color .2s, box-shadow .2s;
+/* ---------- CARTA ---------- */
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.dish{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:20px;display:flex;gap:16px;align-items:flex-start;
+  transition:transform .22s,border-color .22s;
 }
-.skill:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 20px var(--glow)}
-.skill__ic{font-size:1.05rem}
+.dish:hover{transform:translateY(-3px);border-color:var(--red)}
+.dish__ic{font-size:1.6rem;line-height:1}
+.dish__body{flex:1;min-width:0}
+.dish__head{display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.dish__name{font-weight:700;color:var(--title);font-size:1rem}
+.dish__price{font-weight:800;color:var(--gold);white-space:nowrap;font-size:1.05rem}
+.dish__desc{font-size:.9rem;color:var(--muted);margin-top:4px}
 
-/* ============ CARDS ============ */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.card{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);
-  transition:transform .25s var(--ease), border-color .25s, box-shadow .25s;
+/* ---------- INFO ---------- */
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.info{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.info h3{font-size:1.1rem;margin-bottom:10px}
+.info p{font-size:.94rem}
+.info a{color:var(--gold);font-weight:600}
+.info a:hover{text-decoration:underline}
+
+/* ---------- FOOTER ---------- */
+.footer{border-top:1px solid var(--border);padding-block:28px;margin-top:40px;font-size:.86rem;color:var(--muted);text-align:center}
+.socials{display:flex;gap:16px;justify-content:center;margin-top:12px}
+.socials a{font-weight:600;color:var(--text)}
+.socials a:hover{color:var(--gold)}
+
+/* ---------- ADMIN ---------- */
+.admin-fab{
+  position:fixed;right:18px;bottom:18px;z-index:70;
+  width:52px;height:52px;border-radius:50%;border:1px solid var(--border);
+  background:var(--surface);color:var(--muted);font-size:1.2rem;cursor:pointer;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);transition:.2s;
 }
-.card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 18px 40px var(--glow)}
-.card__ic{font-size:1.7rem;margin-bottom:10px}
-.card h3{font-size:1.05rem;margin-bottom:8px}
-.card p{font-size:.94rem}
-.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
-.chips li{background:var(--chip-bg);color:var(--accent);font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:7px}
-
-/* ============ CONTACTE ============ */
-.contact{
-  text-align:center;padding:clamp(32px,6vw,52px) clamp(20px,4vw,32px);
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--radius);box-shadow:var(--shadow);
+.admin-fab:hover{color:var(--gold);border-color:var(--gold);transform:scale(1.06)}
+.modal{
+  position:fixed;inset:0;z-index:100;display:none;
+  align-items:center;justify-content:center;padding:20px;
+  background:rgba(0,0,0,.75);backdrop-filter:blur(4px);
 }
-.contact h2{justify-content:center}
-.contact h2::after{display:none}
-.contact p{max-width:46ch;margin-inline:auto}
-
-/* ============ FOOTER ============ */
-.footer{border-top:1px solid var(--border);margin-top:clamp(32px,6vw,64px);padding-block:28px}
-.footer__inner{
-  display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
-  font-size:.85rem;color:var(--muted);
+.modal.is-open{display:flex}
+.modal__box{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  width:100%;max-width:420px;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.6);
+  max-height:90vh;overflow:auto;
 }
-.footer nav{display:flex;gap:18px}
-.footer a{text-decoration:none;transition:color .2s}
-.footer a:hover{color:var(--accent)}
+.modal__box--wide{max-width:720px}
+.modal__box h3{font-size:1.3rem;margin-bottom:6px}
+.modal__box p.hint{font-size:.86rem;color:var(--muted);margin-bottom:18px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.85rem;font-weight:600;color:var(--title);margin-bottom:6px}
+.field input{
+  width:100%;padding:11px 13px;border-radius:10px;
+  background:var(--surface-2);border:1px solid var(--border);
+  color:var(--title);font:inherit;font-size:.95rem;
+}
+.field input:focus{outline:none;border-color:var(--gold)}
+.error{color:#ff6b6b;font-size:.86rem;margin-top:10px;min-height:1.2em}
+.modal__actions{display:flex;gap:10px;margin-top:18px}
+.modal__actions .btn{flex:1;justify-content:center}
 
-/* ============ REVEAL ============ */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease), transform .6s var(--ease)}
-.reveal.is-visible{opacity:1;transform:none}
+.admin-row{
+  display:grid;grid-template-columns:1fr 110px 40px;gap:10px;
+  align-items:center;padding:9px 0;border-bottom:1px solid var(--border);
+}
+.admin-row input{
+  padding:9px 11px;border-radius:9px;background:var(--surface-2);
+  border:1px solid var(--border);color:var(--title);font:inherit;font-size:.9rem;width:100%;
+}
+.admin-row input:focus{outline:none;border-color:var(--gold)}
+.admin-row .del{
+  width:34px;height:34px;border-radius:9px;cursor:pointer;
+  background:transparent;border:1px solid var(--border);color:#ff6b6b;font-size:1rem;
+}
+.admin-row .del:hover{border-color:#ff6b6b;background:rgba(255,107,107,.1)}
+.admin-head{display:grid;grid-template-columns:1fr 110px 40px;gap:10px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding-bottom:8px}
+.saved{color:#4ade80;font-size:.86rem;margin-top:12px;min-height:1.2em}
 
-/* ============ RESPONSIVE ============ */
-@media (max-width:760px){
-  .nav__toggle{display:flex}
+@media (max-width:780px){
+  .nav__toggle{display:block}
   .nav__menu{
-    position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:2px;
+    position:absolute;top:100%;left:0;right:0;flex-direction:column;
     background:var(--surface);border-bottom:1px solid var(--border);
-    padding:12px clamp(16px,4vw,24px) 18px;
-    box-shadow:0 20px 40px rgba(15,23,42,.12);display:none;
+    padding:10px 16px 16px;display:none;
   }
   .nav__menu.is-open{display:flex}
-  .nav__menu a{padding:12px 14px;font-size:.95rem}
-  .brand__text{display:none}
-  .theme__label{display:none}
-  .theme{padding:9px 12px}
+  .brand__name{display:none}
+  .admin-row,.admin-head{grid-template-columns:1fr 90px 36px}
 }
-@media (max-width:640px){
-  .hero__inner{grid-template-columns:1fr;text-align:center;justify-items:center}
-  .role{width:auto}
-  .cta{justify-content:center}
-  .lead{margin-inline:auto}
-  .footer__inner{justify-content:center;text-align:center}
-}
-
-/* ============ PREFERÈNCIES ============ */
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{
-    animation-duration:.01ms !important;
-    animation-iteration-count:1 !important;
-    transition-duration:.01ms !important;
-  }
-  .reveal{opacity:1;transform:none}
-}
-@media print{
-  .nav,.footer,.cta,.theme{display:none}
-  body{background:#fff;color:#000}
-  .card,.stat,.contact{box-shadow:none;border-color:#ccc}
-}
+@media print{.nav,.admin-fab,.cta{display:none}}
 </style>
 </head>
 <body>
 
-<a class="skip" href="#main">Salta al contingut</a>
-
-<header class="nav" id="nav">
+<header class="nav">
   <div class="wrap nav__inner">
-    <a class="brand" href="#top" aria-label="Inici — Christian Rios">
-      <span class="brand__mark" aria-hidden="true">CR</span>
-      <span class="brand__text">Christian Rios</span>
+    <a class="brand" href="#top">
+      <img class="brand__logo" src="logo.png" alt="Rostisseria Cal Rafa">
+      <span class="brand__name">Cal Rafa</span>
     </a>
-
-    <button class="nav__toggle" id="navToggle" type="button"
-            aria-expanded="false" aria-controls="navMenu" aria-label="Obre el menú">
-      <span class="nav__bars" aria-hidden="true"></span>
-    </button>
-
-    <nav class="nav__menu" id="navMenu" aria-label="Navegació principal">
-      <a href="#sobre">Sobre mi</a>
-      <a href="#formacio">Formació</a>
-      <a href="#skills">Competències</a>
-      <a href="#projectes">Projectes</a>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-label="Obre el menú">☰</button>
+    <nav class="nav__menu" id="navMenu">
+      <a href="#carta">Carta</a>
+      <a href="#info">On som</a>
       <a href="#contacte">Contacte</a>
     </nav>
-
-    <button class="theme" id="themeBtn" type="button" aria-pressed="false">
-      <span class="theme__icon" aria-hidden="true">🌙</span>
-      <span class="theme__label">Mode nit</span>
-    </button>
   </div>
 </header>
 
-<main id="main">
+<main id="top">
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="wrap hero__inner">
-      <div class="hero__photo">
-        <img src="img/christian.jpg" width="220" height="220"
-             alt="Christian Rios amb casc i màscara de pilot a la cabina d'un avió"
-             fetchpriority="high" decoding="async">
-      </div>
-
-      <div class="hero__body">
-        <p class="eyebrow">Rubí · Catalunya</p>
-        <h1>Christian Rios</h1>
-        <p class="role">Tècnic en Sistemes Microinformàtics i Xarxes</p>
-        <p class="lead">
-          Reparació de maquinari, instal·lació de sistemes Linux i Windows, i configuració
-          de xarxes cablejades i Wi-Fi. Metòdic, curiós i amb ganes d'aprendre dins un equip real.
-        </p>
-
-        <p class="status">
-          <span class="status__dot" aria-hidden="true"></span>
-          Disponible per a pràctiques FCT / Dual
-        </p>
-
-        <div class="cta">
-          <a class="btn btn--primary" href="#contacte">Contacta'm</a>
-          <a class="btn btn--ghost" href="#projectes">Veure projectes</a>
-        </div>
+  <section class="hero">
+    <div class="wrap">
+      <img class="hero__logo" src="logo.png" alt="Rostisseria Cal Rafa — pollastres a l'ast i cuina casolana">
+      <h1>Pollastres a l'ast i cuina casolana</h1>
+      <p class="hero__tag">Ripollet · Rambla de les Vinyes, 12</p>
+      <p class="lead">Fet al moment, amb el foc de sempre. Vine a buscar-ho o demana-ho per telèfon i t'ho tenim a punt.</p>
+      <div class="cta">
+        <a class="btn btn--primary" href="tel:+34636954983">📞 636 954 983</a>
+        <a class="btn btn--wa" href="https://wa.me/34636954983" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn btn--ghost" href="#carta">Veure la carta</a>
       </div>
     </div>
   </section>
 
-  <!-- MÈTRIQUES -->
-  <section class="wrap reveal">
-    <ul class="stats">
-      <li class="stat"><b>Linux + Windows</b><span>Sistemes que administro</span></li>
-      <li class="stat"><b>VLAN · DHCP</b><span>Xarxes i encaminament</span></li>
-      <li class="stat"><b>cron</b><span>Còpies de seguretat automatitzades</span></li>
-    </ul>
+  <section class="wrap section" id="carta">
+    <h2>La carta</h2>
+    <p class="section__sub">Preus orientatius. Truca'ns per confirmar disponibilitat del dia.</p>
+    <div class="menu-grid" id="menuGrid"></div>
   </section>
 
-  <!-- SOBRE MI -->
-  <section class="wrap section reveal" id="sobre">
-    <h2>Sobre mi</h2>
-    <div class="prose">
-      <p>
-        Estudio el cicle de <strong>Sistemes Microinformàtics i Xarxes</strong> i em moc bé
-        tant amb el maquinari com amb la part de sistemes i xarxa. M'interessa especialment
-        muntar entorns funcionals des de zero: un servidor de fitxers, una xarxa segmentada
-        o una rutina de backups que realment s'executi sola.
-      </p>
-      <p>
-        Fora de l'aula m'agrada la mecànica i tot el que té motor, cosa que em va ensenyar
-        a diagnosticar per passos i no canviar peces a l'atzar.
-      </p>
+  <section class="wrap section" id="info">
+    <h2>On som</h2>
+    <p class="section__sub">Rambla de les Vinyes, 12 — Ripollet (Barcelona)</p>
+    <div class="info-grid">
+      <div class="info">
+        <h3>📍 Adreça</h3>
+        <p>Rambla de les Vinyes, 12<br>08291 Ripollet, Barcelona</p>
+      </div>
+      <div class="info">
+        <h3>📞 Telèfon</h3>
+        <p><a href="tel:+34636954983">636 954 983</a></p>
+        <p><a href="https://wa.me/34636954983" target="_blank" rel="noopener">Escriu-nos per WhatsApp</a></p>
+      </div>
+      <div class="info">
+        <h3>🕒 Horari</h3>
+        <p>De dimarts a diumenge<br>12:00 – 15:30 i 19:00 – 22:30<br>Dilluns tancat</p>
+      </div>
     </div>
   </section>
 
-  <!-- FORMACIÓ -->
-  <section class="wrap section reveal" id="formacio">
-    <h2>Formació</h2>
-    <ol class="timeline">
-      <li class="timeline__item">
-        <span class="timeline__dot" aria-hidden="true"></span>
-        <div class="timeline__body">
-          <h3>Cicle Formatiu de Grau Mitjà en SMX</h3>
-          <p class="timeline__meta">En curs · Sistemes Microinformàtics i Xarxes</p>
-          <p>Muntatge i manteniment d'equips, sistemes operatius, xarxes locals i seguretat bàsica.</p>
-        </div>
-      </li>
-      <li class="timeline__item">
-        <span class="timeline__dot" aria-hidden="true"></span>
-        <div class="timeline__body">
-          <h3>Aprenentatge autodidacta</h3>
-          <p class="timeline__meta">Continu</p>
-          <p>Virtualització amb VirtualBox i Proxmox, administració de Debian/Ubuntu i laboratoris amb Packet Tracer.</p>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <!-- COMPETÈNCIES -->
-  <section class="wrap section reveal" id="skills">
-    <h2>Competències tècniques</h2>
-    <ul class="skills">
-      <li class="skill"><span class="skill__ic" aria-hidden="true">🖥️</span> Muntatge i manteniment de PC</li>
-      <li class="skill"><span class="skill__ic" aria-hidden="true">🐧</span> Linux (Ubuntu / Debian)</li>
-      <li class="skill"><span class="skill__ic" aria-hidden="true">🪟</span> Windows Server i Active Directory</li>
-      <li class="skill"><span class="skill__ic" aria-hidden="true">🌐</span> Cisco Packet Tracer</li>
-      <li class="skill"><span class="skill__ic" aria-hidden="true">📦</span> VirtualBox / Proxmox</li>
-      <li class="skill"><span class="skill__ic" aria-hidden="true">🔧</span> Cablejat de xarxa (RJ-45)</li>
-      <li class="skill"><span class="skill__ic" aria-hidden="true">🔐</span> Còpies de seguretat i recuperació</li>
-    </ul>
-  </section>
-
-  <!-- PROJECTES -->
-  <section class="wrap section reveal" id="projectes">
-    <h2>Projectes i pràctiques</h2>
-    <div class="grid">
-      <article class="card">
-        <p class="card__ic" aria-hidden="true">🗄️</p>
-        <h3>Servidor de fitxers i seguretat a l'aula</h3>
-        <p>
-          Equip amb Linux Debian com a servidor Samba amb permisos per usuari, quotes de disc
-          i tasques programades amb <code>cron</code> per a còpies de seguretat.
-        </p>
-        <ul class="chips"><li>Linux</li><li>Samba</li><li>Bash</li></ul>
-      </article>
-
-      <article class="card">
-        <p class="card__ic" aria-hidden="true">🏢</p>
-        <h3>Infraestructura de xarxa per a oficina</h3>
-        <p>
-          Disseny amb Packet Tracer amb encaminament estàtic, dues VLAN separades
-          (administració i públic) i assignació dinàmica d'IP amb DHCP.
-        </p>
-        <ul class="chips"><li>Packet Tracer</li><li>VLAN</li><li>DHCP</li></ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- CONTACTE -->
-  <section class="wrap section reveal" id="contacte">
-    <div class="contact">
-      <h2>Parlem?</h2>
-      <p>Estic disponible per fer les pràctiques FCT o Dual. Escriu-me i et responc aviat.</p>
-      <div class="cta cta--center">
-        <a class="btn btn--primary" href="mailto:christian2507092009@gmail.com">✉️ Envia'm un correu</a>
-        <a class="btn btn--ghost" href="https://github.com/nathansudo09" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
+  <section class="wrap section" id="contacte">
+    <h2>Contacte</h2>
+    <div class="info-grid">
+      <div class="info">
+        <h3>Xarxes socials</h3>
+        <p><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram — Rostisseria Cal Rafa</a></p>
+        <p><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok — Rostisseria Cal Rafa</a></p>
+      </div>
+      <div class="info">
+        <h3>Comandes</h3>
+        <p>Truca o envia un WhatsApp i et guardem la comanda per recollir.</p>
       </div>
     </div>
   </section>
@@ -484,128 +258,284 @@ h2::after{content:"";flex:1;height:1px;background:var(--border)}
 </main>
 
 <footer class="footer">
-  <div class="wrap footer__inner">
-    <p>© <span id="year">2026</span> Christian Rios · Tècnic en SMX</p>
-    <nav aria-label="Navegació del peu">
-      <a href="#sobre">Sobre mi</a>
-      <a href="#projectes">Projectes</a>
-      <a href="#contacte">Contacte</a>
-    </nav>
+  <div class="wrap">
+    <p>© <span id="year"></span> Rostisseria Cal Rafa · Ripollet</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+    </div>
   </div>
 </footer>
+
+<!-- BOTÓ ADMIN -->
+<button class="admin-fab" id="adminFab" title="Panell d'administració" aria-label="Obre el panell d'administració">⚙️</button>
+
+<!-- MODAL LOGIN -->
+<div class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+  <div class="modal__box">
+    <h3 id="loginTitle">Accés administrador</h3>
+    <p class="hint">Introdueix les credencials per editar la carta.</p>
+    <div class="field">
+      <label for="userInput">Usuari</label>
+      <input id="userInput" type="text" autocomplete="username" placeholder="admin">
+    </div>
+    <div class="field">
+      <label for="passInput">Contrasenya</label>
+      <input id="passInput" type="password" autocomplete="current-password" placeholder="••••">
+    </div>
+    <p class="error" id="loginError"></p>
+    <div class="modal__actions">
+      <button class="btn btn--ghost" id="loginCancel" type="button">Cancel·la</button>
+      <button class="btn btn--primary" id="loginOk" type="button">Entra</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL ADMIN -->
+<div class="modal" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+  <div class="modal__box modal__box--wide">
+    <h3 id="adminTitle">Editar la carta</h3>
+    <p class="hint">Canvia noms, preus i descripcions. Els canvis es guarden al teu navegador.</p>
+    <div class="admin-head"><span>Plat</span><span>Preu (€)</span><span></span></div>
+    <div id="adminList"></div>
+    <p class="saved" id="savedMsg"></p>
+    <div class="modal__actions">
+      <button class="btn btn--ghost" id="addDish" type="button">+ Afegir plat</button>
+      <button class="btn btn--ghost" id="resetMenu" type="button">Restaurar</button>
+      <button class="btn btn--primary" id="saveMenu" type="button">Guardar</button>
+    </div>
+    <div class="modal__actions">
+      <button class="btn btn--ghost" id="logoutBtn" type="button">Tanca la sessió</button>
+    </div>
+  </div>
+</div>
 
 <script>
 (() => {
   'use strict';
 
-  const root = document.documentElement;
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* ============================================================
+     CREDENCIALS
+     ⚠️ Això és només per comoditat: qualsevol persona que miri
+     el codi font pot veure aquestes dades. No hi posis res
+     sensible. Per a seguretat real cal un servidor.
+     ============================================================ */
+  const ADMIN_USER = 'admin';
+  const ADMIN_PASS = '1234';
 
-  /* ---------- Tema ---------- */
-  const themeBtn = document.getElementById('themeBtn');
-  const themeIcon = themeBtn.querySelector('.theme__icon');
-  const themeLabel = themeBtn.querySelector('.theme__label');
+  /* ---------- CARTA PER DEFECTE ---------- */
+  const DEFAULT_MENU = [
+    { ic:'🍗', name:'Pollastre a l\'ast sencer', price:12.50, desc:'Amb patates i salsa de la casa.' },
+    { ic:'🍗', name:'Mig pollastre a l\'ast', price:7.00, desc:'Ideal per a una persona.' },
+    { ic:'🍖', name:'Pollastre amb prunes i pinyons', price:14.00, desc:'Recepta casolana de sempre.' },
+    { ic:'🥘', name:'Canelons de carn', price:8.50, desc:'Fets a mà, amb beixamel.' },
+    { ic:'🥔', name:'Patates a la brasa', price:4.00, desc:'Amb all i julivert.' },
+    { ic:'🥗', name:'Amanida de la casa', price:5.50, desc:'Enciam, tomàquet, ceba i olives.' },
+    { ic:'🥖', name:'Pa de pagès', price:1.50, desc:'Fet al forn del dia.' },
+    { ic:'🍰', name:'Postres casolanes', price:4.50, desc:'Pregunta pel dia.' }
+  ];
 
-  const isDark = () => {
-    const forced = root.getAttribute('data-theme');
-    return forced ? forced === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
-  };
+  const STORAGE_KEY = 'calrafa_menu_v1';
+  const SESSION_KEY = 'calrafa_admin';
 
-  const paintTheme = () => {
-    const dark = isDark();
-    themeIcon.textContent = dark ? '☀️' : '🌙';
-    themeLabel.textContent = dark ? 'Mode dia' : 'Mode nit';
-    themeBtn.setAttribute('aria-pressed', String(dark));
-    themeBtn.setAttribute('aria-label', dark ? 'Canvia a mode dia' : 'Canvia a mode nit');
-  };
+  const $ = (id) => document.getElementById(id);
 
-  try {
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark' || saved === 'light') root.setAttribute('data-theme', saved);
-  } catch (e) {}
+  /* ---------- ESTAT ---------- */
+  let menu = loadMenu();
 
-  paintTheme();
+  function loadMenu(){
+    try{
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if(!raw) return structuredClone(DEFAULT_MENU);
+      const parsed = JSON.parse(raw);
+      return Array.isArray(parsed) && parsed.length ? parsed : structuredClone(DEFAULT_MENU);
+    }catch(e){
+      return structuredClone(DEFAULT_MENU);
+    }
+  }
 
-  themeBtn.addEventListener('click', () => {
-    const next = isDark() ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch (e) {}
-    paintTheme();
+  function saveMenu(){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(menu)); }catch(e){}
+  }
+
+  /* ---------- PINTAR CARTA PÚBLICA ---------- */
+  function renderMenu(){
+    const grid = $('menuGrid');
+    grid.innerHTML = '';
+    menu.forEach(item => {
+      const el = document.createElement('article');
+      el.className = 'dish';
+
+      const ic = document.createElement('span');
+      ic.className = 'dish__ic';
+      ic.textContent = item.ic || '🍽️';
+
+      const body = document.createElement('div');
+      body.className = 'dish__body';
+
+      const head = document.createElement('div');
+      head.className = 'dish__head';
+
+      const name = document.createElement('span');
+      name.className = 'dish__name';
+      name.textContent = item.name;
+
+      const price = document.createElement('span');
+      price.className = 'dish__price';
+      price.textContent = Number(item.price).toFixed(2).replace('.', ',') + ' €';
+
+      head.append(name, price);
+
+      const desc = document.createElement('p');
+      desc.className = 'dish__desc';
+      desc.textContent = item.desc || '';
+
+      body.append(head, desc);
+      el.append(ic, body);
+      grid.appendChild(el);
+    });
+  }
+
+  /* ---------- PINTAR EDITOR ---------- */
+  function renderEditor(){
+    const list = $('adminList');
+    list.innerHTML = '';
+    menu.forEach((item, i) => {
+      const row = document.createElement('div');
+      row.className = 'admin-row';
+
+      const name = document.createElement('input');
+      name.type = 'text';
+      name.value = item.name;
+      name.setAttribute('aria-label', 'Nom del plat');
+      name.addEventListener('input', () => { menu[i].name = name.value; });
+
+      const price = document.createElement('input');
+      price.type = 'number';
+      price.step = '0.05';
+      price.min = '0';
+      price.value = item.price;
+      price.setAttribute('aria-label', 'Preu en euros');
+      price.addEventListener('input', () => { menu[i].price = parseFloat(price.value) || 0; });
+
+      const del = document.createElement('button');
+      del.className = 'del';
+      del.type = 'button';
+      del.textContent = '✕';
+      del.setAttribute('aria-label', 'Elimina ' + item.name);
+      del.addEventListener('click', () => {
+        menu.splice(i, 1);
+        renderEditor();
+      });
+
+      row.append(name, price, del);
+      list.appendChild(row);
+    });
+  }
+
+  /* ---------- MODALS ---------- */
+  const loginModal = $('loginModal');
+  const adminModal = $('adminModal');
+
+  function openModal(m){ m.classList.add('is-open'); }
+  function closeModal(m){ m.classList.remove('is-open'); }
+
+  $('adminFab').addEventListener('click', () => {
+    if(sessionStorage.getItem(SESSION_KEY) === 'ok'){
+      renderEditor();
+      openModal(adminModal);
+    }else{
+      $('loginError').textContent = '';
+      $('userInput').value = '';
+      $('passInput').value = '';
+      openModal(loginModal);
+      setTimeout(() => $('userInput').focus(), 50);
+    }
   });
 
-  /* ---------- Menú mòbil ---------- */
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
+  $('loginCancel').addEventListener('click', () => closeModal(loginModal));
 
-  const closeMenu = () => {
-    navMenu.classList.remove('is-open');
-    navToggle.setAttribute('aria-expanded', 'false');
-    navToggle.setAttribute('aria-label', 'Obre el menú');
-  };
+  function tryLogin(){
+    const u = $('userInput').value.trim();
+    const p = $('passInput').value;
+    if(u === ADMIN_USER && p === ADMIN_PASS){
+      sessionStorage.setItem(SESSION_KEY, 'ok');
+      closeModal(loginModal);
+      renderEditor();
+      openModal(adminModal);
+    }else{
+      $('loginError').textContent = 'Usuari o contrasenya incorrectes.';
+      $('passInput').value = '';
+      $('passInput').focus();
+    }
+  }
 
+  $('loginOk').addEventListener('click', tryLogin);
+  $('passInput').addEventListener('keydown', e => { if(e.key === 'Enter') tryLogin(); });
+  $('userInput').addEventListener('keydown', e => { if(e.key === 'Enter') $('passInput').focus(); });
+
+  /* ---------- ACCIONS ADMIN ---------- */
+  $('saveMenu').addEventListener('click', () => {
+    menu = menu.filter(i => i.name.trim() !== '');
+    saveMenu();
+    renderMenu();
+    renderEditor();
+    const msg = $('savedMsg');
+    msg.textContent = '✓ Canvis guardats';
+    setTimeout(() => { msg.textContent = ''; }, 2500);
+  });
+
+  $('addDish').addEventListener('click', () => {
+    menu.push({ ic:'🍽️', name:'Plat nou', price:0, desc:'' });
+    renderEditor();
+    const inputs = $('adminList').querySelectorAll('input[type="text"]');
+    const last = inputs[inputs.length - 1];
+    if(last){ last.focus(); last.select(); }
+  });
+
+  $('resetMenu').addEventListener('click', () => {
+    if(!confirm('Segur que vols restaurar la carta original?')) return;
+    menu = structuredClone(DEFAULT_MENU);
+    saveMenu();
+    renderMenu();
+    renderEditor();
+  });
+
+  $('logoutBtn').addEventListener('click', () => {
+    sessionStorage.removeItem(SESSION_KEY);
+    closeModal(adminModal);
+  });
+
+  /* ---------- TANCAR MODALS ---------- */
+  [loginModal, adminModal].forEach(m => {
+    m.addEventListener('click', e => { if(e.target === m) closeModal(m); });
+  });
+
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape'){
+      closeModal(loginModal);
+      closeModal(adminModal);
+    }
+  });
+
+  /* ---------- MENÚ MÒBIL ---------- */
+  const navToggle = $('navToggle');
+  const navMenu = $('navMenu');
   navToggle.addEventListener('click', () => {
     const open = navMenu.classList.toggle('is-open');
     navToggle.setAttribute('aria-expanded', String(open));
-    navToggle.setAttribute('aria-label', open ? 'Tanca el menú' : 'Obre el menú');
+  });
+  navMenu.addEventListener('click', e => {
+    if(e.target.tagName === 'A'){
+      navMenu.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
   });
 
-  navMenu.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') closeMenu();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeMenu();
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) closeMenu();
-  });
-
-  /* ---------- Nav enganxada ---------- */
-  const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('is-stuck', window.scrollY > 8);
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  /* ---------- Enllaç actiu ---------- */
-  const links = [...navMenu.querySelectorAll('a[href^="#"]')];
-  const sections = links
-    .map(a => document.querySelector(a.getAttribute('href')))
-    .filter(Boolean);
-
-  if ('IntersectionObserver' in window && sections.length) {
-    const spy = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        links.forEach(a => {
-          const active = a.getAttribute('href') === '#' + entry.target.id;
-          a.setAttribute('aria-current', active ? 'true' : 'false');
-        });
-      });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-
-    sections.forEach(s => spy.observe(s));
-  }
-
-  /* ---------- Reveal ---------- */
-  const reveals = document.querySelectorAll('.reveal');
-
-  if (reduce || !('IntersectionObserver' in window)) {
-    reveals.forEach(el => el.classList.add('is-visible'));
-  } else {
-    const io = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, {
-}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-
-    reveals.forEach(el => io.observe(el));
-  }
-
-  /* ---------- Any del peu ---------- */
-  document.getElementById('year').textContent = new Date().getFullYear();
+  /* ---------- INICI ---------- */
+  $('year').textContent = new Date().getFullYear();
+  renderMenu();
 })();
+</script>
+</body>
+</html>
