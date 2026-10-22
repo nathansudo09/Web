@@ -81,3 +81,203 @@
             align-items: center;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            flex-shrink: 0;
+        }
+
+        .header-content { flex-grow: 1; }
+        h1 { color: var(--text-title); font-size: 1.7rem; }
+        .subtitol { color: var(--accent); font-weight: 600; font-size: 1rem; margin-bottom: 8px; }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 12px;
+            font-weight: 500;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: currentColor;
+            border-radius: 50%;
+        }
+
+        /* Seccions */
+        h2 {
+            color: var(--text-title);
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        section { margin-bottom: 30px; }
+
+        /* Habilitats (Skills) */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text-title);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Projectes */
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .project-card h3 { color: var(--text-title); font-size: 1.1rem; margin-bottom: 6px; }
+        .project-tags { margin-top: 10px; }
+        .project-tag {
+            background: var(--tag-bg);
+            color: var(--accent);
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        /* Contacte */
+        .links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .links a:hover { text-decoration: underline; }
+
+        /* Adaptació a mòbil */
+        @media (max-width: 600px) {
+            header { flex-direction: column; text-align: center; }
+            .status-badge { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Botó per canviar de tema -->
+        <div class="top-bar">
+            <button class="theme-btn" id="themeToggle" onclick="toggleTheme()">☀️ Mode Dia</button>
+        </div>
+
+        <!-- Capçalera amb Foto -->
+        <header>
+            <!-- Imatge per defecte tipus avatar tècnic; l'alumne la pot canviar per una foto seva -->
+            <img class="profile-img" src="https://media.istockphoto.com/id/522855255/vector/male-profile-flat-blue-simple-icon-with-long-shadow.jpg?s=612x612&w=0&k=20&c=EQa9pV1fZEGfGCW_aEK5X_Gyob8YuRcOYCYZeuBzztM=" alt="Foto de perfil">
+            
+            <div class="header-content">
+                <h1>Joan Garcia</h1>
+                <p class="subtitol">Tècnic en Sistemes Microinformàtics i Xarxes (SMX)</p>
+                <p>Especialitzat en reparació de maquinari, instal·lació de sistemes Linux/Windows i configuració de xarxes cablejades i Wi-Fi.</p>
+                
+                <div class="status-badge">
+                    <span class="status-dot"></span> Buscant pràctiques d'empresa (FCT / Dual)
+                </div>
+            </div>
+        </header>
+
+        <!-- Habilitats -->
+        <section>
+            <h2>Competències Tècniques</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">🖥️ Muntatge i Manteniment PC</span>
+                <span class="skill-tag">🐧 Linux (Ubuntu / Debian)</span>
+                <span class="skill-tag">🪟 Windows Server & Active Directory</span>
+                <span class="skill-tag">🌐 Cisco Packet Tracer</span>
+                <span class="skill-tag">📦 Virtualització (VirtualBox / Proxmox)</span>
+                <span class="skill-tag">🔧 Cablejat de Xarxa (RJ-45)</span>
+                <span class="skill-tag">🔐 Còpies de Seguretat i Recuperació</span>
+            </div>
+        </section>
+
+        <!-- Projectes -->
+        <section>
+            <h2>Projectes i Pràctiques</h2>
+
+            <div class="project-card">
+                <h3>Servidor d'Arxius i Seguretat a l'Aula</h3>
+                <p>Configuració d'un equip amb Linux Debian actuant com a servidor SAMBA amb permisos per usuaris, quotes de disc i tasques programades (cron) per a còpies de seguretat.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Linux</span>
+                    <span class="project-tag">Samba</span>
+                    <span class="project-tag">Bash</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Infraestructura de Xarxa per a Oficina</h3>
+                <p>Disseny d'una xarxa amb Packet Tracer utilitzant encaminament estàtic, dues VLANs separades (administració i públic) i assignació dinàmica d'IPs mitjançant DHCP.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Packet Tracer</span>
+                    <span class="project-tag">VLAN</span>
+                    <span class="project-tag">DHCP</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacte -->
+        <section>
+            <h2>Contacte</h2>
+            <div class="links">
+                <a href="mailto:elmeucorreu@gmail.com">✉️ Envia'm un correu</a>
+                <a href="https://github.com" target="_blank">🐙 GitHub</a>
+                <a href="https://linkedin.com" target="_blank">💼 LinkedIn</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Script senzill per commutar Dia/Nit -->
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const btn = document.getElementById('themeToggle');
+            
+            body.classList.toggle('light-mode');
+            
+            if (body.classList.contains('light-mode')) {
+                btn.textContent = '🌙 Mode Nit';
+            } else {
+                btn.textContent = '☀️ Mode Dia';
+            }
+        }
+    </script>
+
+</body>
+</html>
